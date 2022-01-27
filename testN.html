@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Navigation Menu</title>
+<link REL=Stylesheet TYPE="text/css" HREF="../../../Programming.css">
+<meta HTTP-EQUIV="keywords" NAME="keywords" CONTENT="JavaScript, menus, samples, scripts, freeware, examples, software, SELECT,  navigation menu, onChange"><meta NAME="description" CONTENT="A demonstration of how to use the 'onChange' handler in  JavaScript to create a navigation menu."><meta NAME="robots" CONTENT="ALL"><meta NAME="author" CONTENT="Angus McIntyre"><meta NAME="authoraddress" CONTENT="webmaster@raingod.com"><meta NAME="generator" CONTENT="MELISSA+ 0.1"><meta NAME="copyright" CONTENT="&copy; 2000 Angus McIntyre"><meta NAME="date" CONTENT="1999-06-12T013:58:41+00:00">
+
+
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000"
+	  LINK="#666699" VLINK="#333366"
+	  ALINK="#00FFFF">
+<table WIDTH=470 ALIGN=CENTER><tr><td><p CLASS="navigationstrip">&nbsp;
+
+<a HREF="../../../../../../index.html">raingod</a>
+
+ &gt;&gt;
+
+<a HREF="../../../../index.html">resources</a>
+
+ &gt;&gt;
+
+<a HREF="../../index.html">JavaScript</a>
+
+ &gt;&gt;
+
+<a HREF="../index.html">Software</a>
+
+ &gt;&gt;
+
+<a HREF="index.html">Navigation Menu</a>
+
+&nbsp;</p>
+
+
+
+
+<h1 CLASS="title" ALIGN=CENTER>Navigation Menu</h1>
+
+<p CLASS="updatetag" ALIGN=CENTER>Last updated: 12.06.1999</p>
+
+<hr NOSHADE SIZE=1>
+
+<noscript>
+<p CLASS="nojavascript">
+<img SRC="../../../../../../inline/iconNote.gif"
+	 ALT="Note:" HSPACE=10 ALIGN=LEFT WIDTH=32 HEIGHT=32>
+This demonstration requires JavaScript. If your browser doesn't
+support JavaScript, or you've disabled it, the demonstration will
+not work.</p>
+<hr>
+</noscript>
+<table ALIGN=CENTER><tr><td>
+<form NAME="Navigation">
+<b>Navigation</b>
+<select NAME="LinkMenu" ID="LinkMenu"
+		onclick="window.location = this.options[this.selectedIndex].value" size=5>
+	<option VALUE="../../../Java/index.html">Java</option>
+	<option SELECTED VALUE="../../../JavaScript/index.html">JavaScript</option>
+
+	<option VALUE="../../../Perl/index.html">Perl</option>
+	<option VALUE="../../../../Systems/Macintosh/index.html">Apple Macintosh</option>
+	<option VALUE="../../../../../Users.html">Users</option>
+	<option VALUE="../../../../../Search/index.html">Search</option>
+	<option VALUE="../../../../../WhatsNew.html">What's New</option>
+	<option VALUE="../../../../../SiteIndex.html">Site Index</option>
+
+</select>
+</form>
+<p CLASS="indent10">Choose an entry from this menu to go to the relevant page</p>
+</td></tr></table>
+<hr NOSHADE SIZE=1>
+
+
+<p CLASS="indent10">The navigation menu above works by using the 
+<span CLASS="funcname">onChange</span> function of the 
+<span CLASS="varname">SELECT</span> object to tell the window to load a new
+document. The URLs of the documents to jump to are given by the 
+<span CLASS="varname">VALUE</span> of the various 
+
+<span CLASS="varname">OPTION</span> tags contained in the 
+<span CLASS="varname">SELECT</span>.</p>
+<p CLASS="indent10">This kind of navigation tool has the advantage that it takes up less
+space than a conventional menu made of text or image links, or an image
+map. Unfortunately, it also has some disadvantages.</p>
+<p CLASS="indent10">One problem is that the navigation menu will take on the
+appearance of standard menus on whatever platform your visitors are
+using, which is likely to clash with whatever look
+and feel you have chosen for your pages on at least some platforms.</p>
+<p CLASS="indent10">A more serious disadvantage is that this technique depends on
+JavaScript. As such, if you use it as the only method of navigation on
+your site, you will close your pages to users who have disabled
+JavaScript on their browser, as well as those who don't have
+JavaScript-capable browsers. As more and more sites use JavaScript to
+assault their visitors with pop-up dialogs, scrolling tickers, extra
+windows, layers and other assorted irritations, more and more Web users
+are likely to disable JavaScript so it is unwise to rely on it as the
+only way for people to get around your site.</p>
+<p CLASS="indent10">A third disadvantage is that embedding your links in a menu in this
+way will also stop Web-indexing robots dead in their
+tracks (which may or may not be a good thing, depending on your
+point of view).</p>
+<p CLASS="indent10">It would be possible, with a little effort, to make this system work
+for clients who don't have or use JavaScript. To do this, you will need
+to do three things.</p>
+<ol CLASS="indent10">
+
+	<li>Write a CGI script that reads a URL passed to it as the value of
+		the form variable <span CLASS="varname">LinkMenu</span> (if
+		you follow the form structure above), converts the URL to an
+		absolute URL if necessary (using the 
+		<span CLASS="varname">HTTP_REFERER</span> environment variable
+		as the base when translating the relative URL to an absolute
+		one), then prints the string 'Location:' followed by the 
+		converted URL and two line-feeds.</li>
+	<li>Set the <span CLASS="varname">ACTION</span> attribute of the
+		form above to point to your CGI script, and set the
+		<span CLASS="varname">METHOD</span> attribute to
+		<span CLASS="varname">GET</span> (or to <span CLASS="varname">POST</span>,
+		according to taste).</li>
+
+	<li>Add a submit button to the form, hidden from JavaScript users
+		within a <span CLASS="varname">&lt;NOSCRIPT&gt;</span> container.</li>
+</ol>
+<p CLASS="indent10">Non-JavaScript users could then choose an item from the menu and click the
+submit button to fire up the CGI script. The CGI script will read the location,
+and issue a redirect which will send your browser to the desired place.</p>
+<p CLASS="indent10">This is a very poor solution, for several reasons. First,
+the user has to do more work: they have to click on the menu, drag to
+the item they want, then move to the submit button and click that. From the
+user interface point of view, this is distinctly unattractive. Compare
+this with the simplicity of clicking once on an image or a piece of
+text. Second, the browser has to do more work. It has to send the
+request to the server, wait for the response, and then send another
+request to actually get the page. Third, the server has to do more work,
+because each time the user wants to go to another page, it has to run a
+script (which means that it typically has to launch Perl or a shell,
+which can take several seconds and significant CPU and memory resources).
+In short, this technique is slow, ugly and horribly inefficient and there's
+no real justification for using it.</p>
+<p CLASS="indent10">The JavaScript navigation menu itself might possibly make sense if you can
+guarantee that all your users will be using JavaScript-capable and -enabled
+browsers. It might be of use in a 'JavaScript-only' version of your site
+(although the idea of maintaining two parallel document trees, one for
+users with JavaScript and another for those without, is not attractive). It
+could also be useful on an intranet where you may be able to guarantee that
+users are using a particular browser. In the context of the wider Web, it's
+little more than a curiosity and probably best left alone.</p>
+		</td>
+	</tr>
+
+</table>
+<table WIDTH=470 ALIGN=CENTER><tr><td>
+<a HREF="../../../../index.html" TITLE="JavaScript"><img 
+   SRC="../../../../../../inline/bar5W.gif" ALT="[raingod:resources:javascript] -- "
+   ALIGN=MIDDLE BORDER=0 HEIGHT=50 WIDTH=260></a><a
+   HREF="../JavaControl/index.html" TITLE="previous"><img
+   SRC="../../../../../../inline/barbtnPreviousW.gif" ALT="[previous]"
+   ALIGN=MIDDLE BORDER=0 HEIGHT=50 WIDTH=40></a><a
+   HREF="../index.html" TITLE="up"><img
+   SRC="../../../../../../inline/barbtnUpW.gif" ALT="[up]"
+   ALIGN=MIDDLE BORDER=0 HEIGHT=50 WIDTH=40></a><a
+   HREF="../BrowserProps/index.html" TITLE="next"><img
+   SRC="../../../../../../inline/barbtnNextW.gif" ALT="[next]"
+   ALIGN=MIDDLE BORDER=0 HEIGHT=50 WIDTH=40></a><a
+   HREF="../../Links/index.html" TITLE="links"><img
+   SRC="../../../../../../inline/barbtnLinksW.gif" ALT="[links]"
+   ALIGN=MIDDLE BORDER=0 HEIGHT=50 WIDTH=40></a><a
+   HREF="../../../../../../index.html" TITLE="home"><img
+   SRC="../../../../../../inline/barbtnHomeW.gif" ALT="[home]"
+   ALIGN=MIDDLE BORDER=0 HEIGHT=50 WIDTH=40></a>
+</td></tr></table>
+</body>
+</html>

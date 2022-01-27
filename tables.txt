@@ -1,0 +1,214 @@
+
+# to create multiple choice questions
+
+CREATE TABLE question(
+   questionid int(11) NOT NULL auto_increment,
+   question text,
+   choice1 mediumtext,
+   choice2 mediumtext,
+   choice3 mediumtext,
+   choice4 mediumtext,
+   choice5 mediumtext,
+   choice6 mediumtext,
+   answer text,
+   date date,
+   feedback mediumtext,
+   category varchar(50) default 'None',
+   reference varchar(50),
+   examid int(11) NOT NULL,
+   type mediumtext,
+   used tinyint(2) NOT NULL DEFAULT 1,
+   weight tinyint(4) NOT NULL DEFAULT 1,
+   PRIMARY KEY (questionid)
+);
+
+#################################
+
+# To create a new Exam or test
+
+CREATE TABLE exam (
+   examid int(11) NOT NULL auto_increment,
+   title mediumtext NOT NULL,
+   id varchar(50) DEFAULT '0' NOT NULL,
+   version varchar(50) DEFAULT '0' NOT NULL,
+   instructions text,
+   date date,
+   questions tinyint(3) DEFAULT '0' NOT NULL,
+   startDate date DEFAULT '0' NOT NULL,
+   endDate date DEFAULT '0' NOT NULL,
+   time tinyint(4) DEFAULT '0' NOT NULL,
+   passingScore tinyint(3) DEFAULT '0' NOT NULL,
+   active varchar(5) DEFAULT 'No',
+   groupid int(11) NOT NULL default '0',
+   PRIMARY KEY (examid)
+);
+
+############################
+
+# Table for registration of candidates
+
+CREATE TABLE candidate (
+ candidateID int(11) DEFAULT '0' NOT NULL auto_increment,
+ userName varchar(20),
+ userPassword varchar(20),
+ firstName tinytext,
+ lastName tinytext,
+ email varchar(50),
+ address tinytext,
+ city tinytext,
+ state tinytext,
+ postCode varchar(20),
+ country tinytext,
+ homePhone varchar(30),
+ workPhone varchar(30),
+ mobilePhone varchar(30),
+ fax varchar(30),
+ company tinytext,
+ title tinytext,
+ date date,
+ admin tinyint(4) DEFAULT '0' NOT NULL,
+ editGroup tinyint(4) DEFAULT '0' NOT NULL,
+ editExam tinyint(4) DEFAULT '0' NOT NULL,
+ PRIMARY KEY (candidateID)
+);
+
+############################
+
+CREATE TABLE scores (
+ scoreid int(11) DEFAULT '0' NOT NULL auto_increment,
+ candidateID int(11) NOT NULL,
+ examid int(11) NOT NULL,
+ marks int(5) DEFAULT '0' NOT NULL,
+ date date,
+ time time,
+ timetaken time,
+ maxMarks int(11) default 0, 
+ PRIMARY KEY (scoreid)
+);
+
+############################
+
+CREATE TABLE test (
+ scoreid int(11) NOT NULL,
+ questionid int(11) NOT NULL,
+ marks int(3) DEFAULT '0',
+ answer text,
+ markQuestion varchar(5),
+ PRIMARY KEY (scoreid,questionid)
+);
+
+############################
+
+CREATE TABLE temp (
+ sno int(11) DEFAULT '0' NOT NULL auto_increment,
+ scoreid int(11) NOT NULL,
+ questionid int(11) NOT NULL,
+ answer text,
+ markQuestion varchar(5),
+ marks int(2) default 0,
+ PRIMARY KEY (sno)
+);
+
+############################
+// diffrent groups
+
+CREATE TABLE groups (
+ groupid int(11) DEFAULT '0' NOT NULL auto_increment,
+ groupName varchar(50) default 'visitor' NOT NULL,
+ PRIMARY KEY (groupid)
+);
+
+############################
+// candidate having permission to change candidates of the group
+
+CREATE TABLE groupPermissions (
+ groupPermissionid int(11) NOT NULL auto_increment,
+ candidateID int(11) NOT NULL default '0',
+ groupid int(11) NOT NULL default '0',
+ PRIMARY KEY (groupPermissionid)
+);
+
+############################
+// candidate having permission to change exams of the group
+
+CREATE TABLE examPermissions (
+ examPermissionid int(11) NOT NULL auto_increment,
+ candidateID int(11) NOT NULL default '0',
+ examid int(11) NOT NULL default '0',
+ PRIMARY KEY (examPermissionid)
+);
+
+############################
+// candidate belonging to a group
+
+CREATE TABLE candidateGroup (
+ candidateGroupid int(11) NOT NULL auto_increment,
+ candidateID int(11) NOT NULL default '0',
+ groupid int(11) NOT NULL default '0',
+ PRIMARY KEY (candidateGroupid)
+);
+
+############################
+
+# For Image questions
+
+CREATE TABLE images (
+  imageid int(11) NOT NULL auto_increment,
+  questionid int(11) NOT NULL default '0',
+  description varchar(255) NOT NULL default '',
+  filename varchar(255) NOT NULL default '',
+  filesize int(11) NOT NULL default '0',
+  width smallint(6) NOT NULL default '0',
+  height smallint(6) NOT NULL default '0',
+  filetype varchar(15) NOT NULL default '',
+  data blob NOT NULL,
+  PRIMARY KEY  (imageid)
+);
+
+############################
+
+CREATE TABLE imageshow (
+  imageid int(11) NOT NULL auto_increment,
+  description varchar(255) NOT NULL default '',
+  filename varchar(255) NOT NULL default '',
+  filesize int(11) NOT NULL default '0',
+  width smallint(6) NOT NULL default '0',
+  height smallint(6) NOT NULL default '0',
+  filetype varchar(15) NOT NULL default '',
+  data blob NOT NULL,
+  PRIMARY KEY  (imageid)
+);
+
+############################
+
+CREATE TABLE dragdrop (
+ scoreid int(11) NOT NULL,
+ questionid int(11) NOT NULL,
+ choice1 mediumtext,
+ choice2 mediumtext,
+ choice3 mediumtext,
+ choice4 mediumtext,
+ choice5 mediumtext,
+ choice6 mediumtext,
+ PRIMARY KEY (scoreid,questionid)
+);
+
+############################
+
++---------+--------+--------------+------------+------+----------+----------+
+| correct | answer | markQuestion | questionid | type | category | userName |
++---------+--------+--------------+------------+------+----------+----------+
+| a       | a      | ON           |          1 | mcs  | Computer | user     |
+| c       | c      | ON           |          2 | mcs  | Computer | user     |
+| bd      |        |              |          3 | mcm  | None     | user     |
+| true    | true   |              |          4 | tf   | Computer | user     |
+| ls      |        |              |          5 | sa   | Computer | user     |
+|         |        |              |          6 | dd   | None     | user     |
++---------+--------+--------------+------------+------+----------+----------+
+
+
+select question.answer as correct , test.answer as answer, test.markQuestion, test.questionid, type, category, userName from test join question join scores join candidate where test.questionid=question.questionid and test.scoreid = scores.scoreid and scores.candidateID=candidate.candidateID  and test.scoreid = 18;
+
+
+############################
+

@@ -1,0 +1,183 @@
+<html>
+<script language="javascript">
+var upSec=0;
+var upMin=0;
+var upHour=0;
+var downSec=0;
+var isTrialUser=1;
+var avaMins;
+if (isTrialUser==1) 
+	avaMins=15;
+else
+	avaMins=20;
+var testType=1;
+var strTestType="1";
+var limitMins = 20;
+var boughtMins=  600;
+var strBoughtMins= "600";
+var	downHour=Math.floor(avaMins/60);
+var	downMin=(avaMins % 60);
+var now=new Date();
+var startSec=now.getSeconds();
+var startMin=now.getMinutes();
+var startHour=now.getHours();
+
+function go()
+{
+	if ((isBlank(strTestType)) || (isBlank(strBoughtMins)))
+	{
+		alert("The current Session established with ExamsOnline.com timed out. Please close your browser and log back in again.");
+		//parent.location.href="../Login/LogoutUser.asp";
+		parent.close();
+		parent.opener.location="../Login/LogoutUser.asp";
+	}
+	else
+	{
+		checkTime(upHour,upMin);
+
+		upSec++;
+		if(upSec>=60)
+		{
+			upSec=0;
+			upMin++;
+		}
+		if(upMin>=60)
+		{
+			upMin=0;
+			upHour++;
+		}
+	
+		startSec++;
+		if(startSec>=60)
+		{
+			startSec=0;
+			startMin++;
+		}
+		if(startMin>=60)
+		{
+			startMin=0;
+			startHour++;
+		}
+
+		if (testType==1)
+		{
+			downSec--;
+			if(downSec<=-1)
+			{
+				downSec=59;
+				downMin--;
+			}
+			if(downMin<=-1)
+			{
+				downMin=59;
+				downHour--;
+			}
+		}
+		upTime=(upHour>=10 ? upHour : "0" +upHour)+":";
+		upTime+=(upMin>=10 ? upMin : "0" + upMin)+":";
+		upTime+=(upSec>=10 ? upSec : "0" + upSec);
+		//startTime=(startHour>=10 ? startHour: "0"+startHour)+":";
+		//startTime+=(startMin>=10 ? startMin: "0"+startMin)+":";
+		//startTime+=(startSec>=10 ? startSec:"0"+ startSec);
+		document.clock.countUp.value=upTime;
+		//document.clock.currentTime.value=startTime;
+		if (testType==1)
+		{
+			downTime=(downHour>=10 ? downHour: "0"+downHour)+":";
+			downTime+=(downMin>=10 ? downMin: "0"+downMin)+":";
+			downTime+=(downSec>=10 ? downSec: "0"+downSec);
+			document.clock.countDown.value=downTime;
+		}
+		setTimeout("go()",1000);
+	}
+}
+
+function checkTime(usedHour, usedMin)
+{
+	var usedMins=usedHour*60 + usedMin;
+	if (testType==1)
+	{
+		if (boughtMins<=limitMins)
+		{
+			if (usedMins>=boughtMins)
+			{
+				alert("You will now need to buy time to continue to use ExamsOnline.");
+				//parent.location.href="../ECommerce/BuyTime.asp";
+				parent.close();
+				parent.opener.location="../ECommerce/BuyTime.asp";
+
+			}
+		}
+		else
+		{
+			if (usedMins>=limitMins)
+			{
+				alert("Your have run out of time. The test will now end.");
+				//parent.location.href="../practice/Result.asp";
+				parent.close();
+				parent.opener.location="../practice/Result.asp";
+			}
+		}
+	}
+	else
+	{
+		if (usedMins>=boughtMins)
+		{
+			alert("You will now need to buy time to continue to use ExamsOnline.");
+			//parent.location.href="../ECommerce/BuyTime.asp";
+			parent.close();
+			parent.opener.location="../ECommerce/BuyTime.asp";
+		}
+	}	
+}
+
+
+function isBlank (InString) 
+{
+	if (InString==null) return (!false)
+	if (InString.length!=0)
+		return (!true);
+	else
+		return (!false);
+}
+
+</script>
+
+
+<head>
+<meta http-equiv="expires" content="12/15/2003 1:40:04 AM">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Exam Top Screen</title>
+<base target="_self">
+<link rel="stylesheet" type="text/css" href="../Styles/Master.css">
+<meta name="Microsoft Border" content="none">
+</head>
+
+<body onload="go()" bgcolor="#CC9900" text="#FFFFFF">
+
+
+<form name="clock">
+
+  <table valign="top" border="0" cellpadding="2" width="100%" cellspacing="0" bordercolor="#CC9900">
+
+ <!--<tr>      <td align="center" valign="top"><strong>Introduction to Oracle 9i: SQL</strong></td>    </tr>-->
+    <tr>
+    
+			      <td align="center" valign="bottom" bgcolor="#CC9900"><font face="Arial"><small>Test Time:</small>
+			      <input type="text" name="countUp" value="00:00:00" size="9">&nbsp;&nbsp;&nbsp; <small>Time
+			      Available: </small><input type="text" name="countDown" size="9"></font></td>
+
+			
+
+    </tr>
+<!--	<tr>      <td valign=top width="15%" ><small><small>Current Time </small></small></td>      <td valign=top width="15%"><small><input type="text" name="currentTime" size="9"></small></td>    </tr>	-->
+  </table>
+</form>
+</body>
+</html>
+
+
+
+
+
