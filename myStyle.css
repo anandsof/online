@@ -1,0 +1,124 @@
+<style>
+   body {background-color: #FFFFFF;
+         color: #000000;
+         font-family: Verdana, Helvetica, Sans-Serif;
+         font-size: 10pt; }
+
+   A:link    {text-decoration: underline;
+              color: #0000FF; }
+   A:visited {text-decoration: underline;
+              color: #0000FF; }
+   A:active  {text-decoration: underline;
+              color: #FF9933; }
+   A:hover   {text-decoration: underline;
+              color: #FF0000}
+
+   td, pre {font-family: Verdana, Helvetica, Sans-Serif;
+            font-size: 10pt; }
+
+   input, textarea, select, option
+              {font-family: Verdana, Helvetica, Sans-Serif;
+               font-size: 10pt; }
+
+   input.timer {font-family: Verdana, Helvetica, Sans-Serif;
+                font-size: 12pt;
+                font-weight: bold;
+                border: 1px;
+                border-style:  solid;
+                border-color:  #D6EBFF;
+                background-color: #D6EBFF; }
+
+  .small     {font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+              font-size: 8pt; }
+
+  .config    {font-family: Courier New, Courier, Sans-Seif;
+              font-size: 10pt; }
+
+  .answers   {font-family: Verdana, Arial, Helvetica, Sans-Serif;
+              font-size: 8pt; }
+
+  .feedback  {color: #ff0000;
+              font-weight: bold; }
+
+  .correct   {color: #00aa00;
+              font-weight: bold; }
+
+  .incorrect {color: #ff0000;
+              font-weight: bold; }
+
+  .smallbold {font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+              font-size: 8pt;
+              color: #ff0000;
+              font-weight: bold; }
+
+  .normal {font-family: Arial, Helvetica, Sans-Sefif; }
+
+  .form {font-family: Verdana, Helvetica, Sans-Serif;
+         background-color: #D6EBFF;
+         border-width: 1px;
+         border-style: solid;
+         border-color: #659ACC;
+         padding: 10px; }
+
+
+  .test {font=family: Verdana, Helvetica, Sans-Serif;
+         border-width: 1px;
+         border-style: solid;
+         border-color: #659ACC; }
+
+  .code_sample {
+                border-width: 1px;
+                border-style: solid;
+                background-color: #eeeeee;
+                border-color: #dddddd;
+                padding: 1px; }
+
+  .even {font-family: Verdana, Helvetica, Sans-Serif;
+         border-width: 1px;
+         border-style: solid;
+         background-color: #E5F3FF;
+         border-color: #659ACC;
+         padding: 5px; }
+
+  .odd {font-family: Verdana, Helvetica, Sans-Serif;
+         border-width: 1px;
+         border-style: solid;
+         background-color: #BDDFFF;
+         border-color: #659ACC;
+         padding: 5px; }
+
+  .answer {font-family: Verdana, Helvetica, Sans-Serif;
+           border-width: 1px;
+           border-style: solid;
+           background-color: #B1FFB1;
+           border-color: #659ACC;
+           padding: 5px; }
+
+  .blank {font-family: Verdana, Helvetica, Sans-Serif;
+          border-width: 1px;
+          border-style: solid;
+          background-color: #eeeeee;
+          border-color: #659ACC;
+          padding: 5px; }
+
+  .help {font-family: Verdana, Helvetica, Sans-Serif;
+         background-color: #FEFFC0;
+         color: #000000;
+         font-size: 8pt;
+         border-width: 1px;
+         border-style: dashed;
+         border-color: #659ACC;
+         padding: 10px; }
+
+  .menu {font-family: Verdana, Helvetica, Sans-Serif;
+         font-size: 8pt;
+         background-color: #F9F9F9;
+         border-width: 1px;
+         border-style: solid;
+         border-color: #659ACC;
+         padding: 10px; }
+
+  .header {font-family: Verdana, Helvetica, Sans-Serif;
+           font-weight: bold;
+           text-align: center; }
+ </style>

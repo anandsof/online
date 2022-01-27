@@ -1,0 +1,267 @@
+<html>
+<head>
+  <title>brains@work - Online Test</title>
+  <meta name="author" content="Ravishankar Bhatia">
+  <style type="text/css">
+   body {background-color: #FFFFFF;
+         color: #000000;
+         font-family: Verdana, Helvetica, Sans-Serif;
+         font-size: 10pt; }
+
+   A:link    {text-decoration: underline;
+              color: #0000FF; }
+   A:visited {text-decoration: underline;
+              color: #0000FF; }
+   A:active  {text-decoration: underline;
+              color: #FF9933; }
+   A:hover   {text-decoration: underline;
+              color: #FF0000}
+
+   td, pre {font-family: Verdana, Helvetica, Sans-Serif;
+            font-size: 10pt; }
+
+   input, textarea, select, option
+              {font-family: Verdana, Helvetica, Sans-Serif;
+               font-size: 10pt; }
+
+   input.timer {font-family: Verdana, Helvetica, Sans-Serif;
+                font-size: 12pt;
+                font-weight: bold;
+                border: 1px;
+                border-style:  solid;
+                border-color:  #D6EBFF;
+                background-color: #D6EBFF; }
+
+  .small     {font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+              font-size: 8pt; }
+
+  .config    {font-family: Courier New, Courier, Sans-Seif;
+              font-size: 10pt; }
+
+  .answers   {font-family: Verdana, Arial, Helvetica, Sans-Serif;
+              font-size: 8pt; }
+
+  .feedback  {color: #ff0000;
+              font-weight: bold; }
+
+  .correct   {color: #00aa00;
+              font-weight: bold; }
+
+  .incorrect {color: #ff0000;
+              font-weight: bold; }
+
+  .smallbold {font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+              font-size: 8pt;
+              color: #ff0000;
+              font-weight: bold; }
+
+  .normal {font-family: Arial, Helvetica, Sans-Sefif; }
+
+  .form {font-family: Verdana, Helvetica, Sans-Serif;
+         background-color: #D6EBFF;
+         border-width: 1px;
+         border-style: solid;
+         border-color: #659ACC;
+         padding: 10px; }
+
+
+  .test {font=family: Verdana, Helvetica, Sans-Serif;
+         border-width: 1px;
+         border-style: solid;
+         border-color: #659ACC; }
+
+  .code_sample {
+                border-width: 1px;
+                border-style: solid;
+                background-color: #eeeeee;
+                border-color: #dddddd;
+                padding: 1px; }
+
+  .even {font-family: Verdana, Helvetica, Sans-Serif;
+         border-width: 1px;
+         border-style: solid;
+         background-color: #E5F3FF;
+         border-color: #659ACC;
+         padding: 5px; }
+
+  .odd {font-family: Verdana, Helvetica, Sans-Serif;
+         border-width: 1px;
+         border-style: solid;
+         background-color: #BDDFFF;
+         border-color: #659ACC;
+         padding: 5px; }
+
+  .answer {font-family: Verdana, Helvetica, Sans-Serif;
+           border-width: 1px;
+           border-style: solid;
+           background-color: #B1FFB1;
+           border-color: #659ACC;
+           padding: 5px; }
+
+  .blank {font-family: Verdana, Helvetica, Sans-Serif;
+          border-width: 1px;
+          border-style: solid;
+          background-color: #eeeeee;
+          border-color: #659ACC;
+          padding: 5px; }
+
+  .help {font-family: Verdana, Helvetica, Sans-Serif;
+         background-color: #FEFFC0;
+         color: #000000;
+         font-size: 8pt;
+         border-width: 1px;
+         border-style: dashed;
+         border-color: #659ACC;
+         padding: 10px; }
+
+  .menu {font-family: Verdana, Helvetica, Sans-Serif;
+         font-size: 8pt;
+         background-color: #F9F9F9;
+         border-width: 1px;
+         border-style: solid;
+         border-color: #659ACC;
+         padding: 10px; }
+
+  .header {font-family: Verdana, Helvetica, Sans-Serif;
+           font-weight: bold;
+           text-align: center; }
+ </style>
+
+ <script language="JavaScript">
+    <!--
+    function checkfields() {
+       validity = true; // assume valid
+       if (document.form.userName.value == "")
+       { validity = false; alert('Please enter your User Name.'); }
+       else if (document.form.password.value == "")
+       { validity = false; alert('Please enter your Password.'); }
+    return validity;
+    }
+    // -->
+  </script>
+
+</head>
+<body>
+
+<?php
+ include('config.inc');
+
+ $db_connect = mysqli_connect($datahost, $datauser, $datapasswd, $base);
+
+ $userName = "";
+ $password = "";
+ $message = "Enter your User Name and Password, and click OK";
+ 
+ if ($_POST['action'] == "login")
+ {
+ $flag = 0;
+ $userName = $_POST['userName'];
+ $password = $_POST['password'];
+
+ $result =  mysqli_query($db_connect,"SELECT candidateID,userName,userPassword FROM candidate");
+
+  while ($row = mysqli_fetch_row($result))
+  {
+    
+  if (($userName == $row[1]) && ($password == $row[2]))
+      {
+        $flag = 1;
+        $ID = $row[0];
+      }
+  }
+
+ if($flag == 0)
+ {
+     if (!$password)
+     {
+      $message = "<br>Please complete all the text boxes<br>";
+      $message .= "<br>Please try again...<br>\n";
+     }
+     else if (!$userName)
+     {
+      $message = "<br>Please complete all the text boxes<br>";
+     }
+     else 
+     {
+     $message = "<br>Login failed<br>\n";
+     $message .= "User Name or Password miss matched, Please try again...\n";
+     }
+ }
+else 
+   $message = " <script language=\"JavaScript\">
+    <!--
+      location.href=\"takeTest.php?ID=$ID\";
+     // -->
+  </script>";
+ }
+?>
+
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td
+ style="text-align: center; background-color: rgb(214, 235, 255);"><big
+ style="font-weight: bold; font-style: italic;"><big><big><big><big><big>brains@work</big></big></big></big></big></big><br>
+      </td>
+      <td valign="bottom"> <br>
+      </td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top">
+      <form name="form" method="post" action="mainTest.php" onsubmit="return checkfields()">
+        <div class="menu">
+        <center><b>Log in</b></center>
+        <br>
+        <table>
+          <tbody>
+	<tr>
+	  <td>
+<?php 
+print("<font color=RED>$message</font>\n");
+print <<< LOGIN
+	<br><br></td>
+   </tr>
+   <tr>
+	<td align="right">User Name:</td>
+	<td> 
+        <p><input type="text" name="userName" value="$userName"  maxlength="10"></p>
+	</td>
+  </tr>
+  <tr>
+	<td align="right">Password:</td>
+	<td> 				
+        <p><input type="password" name="password" value="$password" maxlength="10">
+        </p>
+         </td>
+   </tr>
+ <tr>
+   <td>
+<input name="action" type="hidden" value="login">
+             <input type="submit" value=" OK ">
+   </td>
+  </tr>
+LOGIN;
+mysqli_close($db_connect);
+
+?>
+
+          </tbody>
+        </table>
+        </div>
+      </form>
+      </td>
+ <td width="75%" align="left" valign="top">
+      <div class="form">
+      <p>brains@work is a online testing application.  You will need to
+login before you can take any tests.</p>
+      <p>If you do not have an account, you can register <a
+ href="profile.php">by clicking on this link</a>.</p>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+</body>
+</html>
