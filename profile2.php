@@ -103,6 +103,6 @@
 </table>
 
 </form>
-<br><br><br><br><br><div align='right'><a href='http://www.coursewebs.com' target='_new'><img src='/cw/pwrdby_cw.png'  alt='Powered By CourseWebs' border='0'></a></div>
+<br><br><br><br><br>
 </body>
 </html>
