@@ -8,7 +8,4 @@ $datahost = "localhost";
 $datauser = "database_user";
 $datapasswd = "database_pwd";
 $base = "database_name";
-$ABSOLUTE_PATH = "https://online.certexams.com/online-test/";
-
-
 ?>
