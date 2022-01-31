@@ -75,13 +75,17 @@ This is where you try to compress your project and make the reader understand wh
 
 ### Installation
 <!-- If your project needs installation of certain software or configurations to the system. Do mention it in this section as it helps a lot for the reader to use your project. The steps mentioned should be precise and explanatory.  If possible, you can add links that can help them better understand how to configure/install the necessary files or softwares. -->
-The installation is manual. You need to manually create the required database and give permissions as mentioned in the relevant document. The code modules need to be uploaded using FTP as specified in the document and give appropriate permissions for each file/directory.
-Set login and passwords as specified below:
-<config.inc> <8> <DB_USER>
-<config.inc> <9> <DB_PASSWORD>
-<config.inc> <10> <DB_NAME>
-(to be completed)
-
+The installation is manual. You need to manually create the required database and give permissions.<br>
+The code can be downloaded as a zip file from the repository. Create a MySQL database on your server, as well as a database user with full access and modification rights to the database.<br>
+Import the file "sql-statements-online.sql" into your MYSQL database. It will create all of the necessary tables.<br>
+Update the config.inc file to add the database name, database user, and password that were generated earlier. Set login and passwords as specified below:<br>
+***********
+$datahost = "localhost"; <br>
+$datauser = "database_user"; <br>
+$datapasswd = "database_pwd";<br>
+$base = "database_name";<br>
+***********
+The code modules need to be uploaded using FTP as specified in the document and give appropriate permissions for each file/directory.
 <!-- ### API reference
  If your project is small, then we can add the reference docs in the readme. For larger projects, it is better to provide links to where the API reference documentation is documented. -->
 
