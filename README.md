@@ -77,7 +77,9 @@ This is where you try to compress your project and make the reader understand wh
 <!-- If your project needs installation of certain software or configurations to the system. Do mention it in this section as it helps a lot for the reader to use your project. The steps mentioned should be precise and explanatory.  If possible, you can add links that can help them better understand how to configure/install the necessary files or softwares. -->
 The installation is manual. You need to manually create the required database and give permissions as mentioned in the relevant document. The code modules need to be uploaded using FTP as specified in the document and give appropriate permissions for each file/directory.
 Set login and passwords as specified below:
-<Document name> <line no.> <login> <password>
+<config.inc> <8> <DB_USER>
+<config.inc> <9> <DB_PASSWORD>
+<config.inc> <10> <DB_NAME>
 (to be completed)
 
 <!-- ### API reference
