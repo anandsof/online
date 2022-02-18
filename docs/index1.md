@@ -33,7 +33,7 @@
 		</div>
 		<div class="feature">
 			<h3>Certexams.com Blog</h3>
-			<p>Checkout the <a href="https://www.certexams.com/blog"> Certexams blog</a> for recent news</p>
+			<p>Checkout the  following<a href="https://www.certexams.com/blog"> Certexams blog</a> for recent news</p>
 		</div>
 	<footer>
 		&copy;2022 <a href="https://www.anandsoft.com">Anand Software and Training Pvt. Ltd.</a>, All Rigts Reserved.
