@@ -1,0 +1,11 @@
+E:\Captured\Encryptpdffile\Encryptpdffile\bin\Debug\Encryptpdffile.exe.config
+E:\Captured\Encryptpdffile\Encryptpdffile\bin\Debug\Encryptpdffile.exe
+E:\Captured\Encryptpdffile\Encryptpdffile\bin\Debug\Encryptpdffile.pdb
+E:\Captured\Encryptpdffile\Encryptpdffile\bin\Debug\Encryptpdffile.xml
+E:\Captured\Encryptpdffile\Encryptpdffile\obj\Debug\Encryptpdffile.vbprojResolveAssemblyReference.cache
+E:\Captured\Encryptpdffile\Encryptpdffile\obj\Debug\Encryptpdffile.frmencrypt.resources
+E:\Captured\Encryptpdffile\Encryptpdffile\obj\Debug\Encryptpdffile.Resources.resources
+E:\Captured\Encryptpdffile\Encryptpdffile\obj\Debug\Encryptpdffile.vbproj.GenerateResource.Cache
+E:\Captured\Encryptpdffile\Encryptpdffile\obj\Debug\Encryptpdffile.exe
+E:\Captured\Encryptpdffile\Encryptpdffile\obj\Debug\Encryptpdffile.xml
+E:\Captured\Encryptpdffile\Encryptpdffile\obj\Debug\Encryptpdffile.pdb
