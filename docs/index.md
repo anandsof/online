@@ -1,13 +1,12 @@
 <!-- Project Title -->
 # Web Based Online Exams
-## Project Summary:
-<!-- A little brief about what the project is about. It should be like a small summary format informing about the main purpose of the project. -->
+
 The intention is to make online exam available using PHP/MySQL Apache web server. The scripts are commented as necessary, but feel free to update the same. One can install the scripts, and configure the same appropriately, after which, it is possible to create, populate, and deliver the exams over the Internet. The user just needs to login to take the exam(s)
 
 # Table of contents
 
 
-## Features
+# Features
 <!-- This is where you write what all extra features have been done in your project. Basically this is where you try to make your project stand out from the rest. -->
 
 - Simple interface which is intuitive to the user
@@ -16,7 +15,7 @@ The intention is to make online exam available using PHP/MySQL Apache web server
 - Scope for improvement
 - there is scope for improving the statistics reporting.
 
-## Requirements
+# Requirements
 
 The server is preferably a web server accessible over the Internet in LAMP (Linux, Apache, MySQL, and PHP) environment. Before going ahead make sure that PHP script on the web server is working properly, and MySQL is installed and accessible using PHP. 
 
@@ -30,7 +29,7 @@ The server is preferably a web server accessible over the Internet in LAMP (Linu
 
 Local system (Client computer) requirements: Any Windows 7, 8, 10 or 11 computer may be used to access the web server remotely and install downloaded CBT server side scripts. You need an FTP software such as FileZilla to upload the files to the web server from your client computer. You also need to have login and password handy to login to the web server using FTP. Web server control panel such as C-panel/PHPMyAdmin will be useful in configuring the web server database, but not essential. 
 
-### Installation
+# Installation
 The installation is manual. Follow the steps given below to install project on your server.<br>
 
 **Step 1 : Creating MySQL database**
@@ -62,7 +61,7 @@ $datahost = "localhost"; <br>
 $datauser = "database_user"; <br>
 $datapasswd = "database_pwd";<br>
 $base = "database_name";<br>
-***********
+***********<br>
 
 **Step 7 : Upload files to server**
 
@@ -75,65 +74,50 @@ Next open the index page in any browser. URL for the index page will be "https:/
 
 
 ## Screenshots
-<!-- As the saying goes, a picture is equal to a thousand words. Most people will be interested if there is a visual representation of what the project is about. It helps them understand better. A visual representation can be snapshots of the project or a video of the functioning of the project.
--->
-Given below is the login screen (the login is same for user as well as the exam admin. However, admins will have more privileges like creating authors.
-<img width="608" alt="login" src="https://user-images.githubusercontent.com/33366524/151390671-052bdd53-92aa-4414-8f6e-1548f7fe516d.png">
-Given below is the User dashboard that displays a left pane and a right pane. The left pane enables users to change password, view profile, etc.
 
-<img width="926" alt="dashboard" src="https://user-images.githubusercontent.com/33366524/151390638-2d5ae65b-1e71-41f7-8a61-4b3b73bcba3f.png">
+**Given below is the login screen (the login is same for user as well as the exam admin. However, admins will have more privileges like creating authors.**<br>
+<img width="608" alt="login" src="https://user-images.githubusercontent.com/33366524/151390671-052bdd53-92aa-4414-8f6e-1548f7fe516d.png"><br>
+**Given below is the User dashboard that displays a left pane and a right pane. The left pane enables users to change password, view profile, etc.**<br>
 
-There are two modes of exam, one is Learn mode and the other is Exam mode.
-<img width="616" alt="exam-modes" src="https://user-images.githubusercontent.com/33366524/151390658-1f917031-b49e-45e2-8bcf-f84c27e73c4d.png">
+<img width="926" alt="dashboard" src="https://user-images.githubusercontent.com/33366524/151390638-2d5ae65b-1e71-41f7-8a61-4b3b73bcba3f.png"><br>
 
-Given below shows a typical exhibit based question:
+**There are two modes of exam, one is Learn mode and the other is Exam mode.**<br>
+<img width="616" alt="exam-modes" src="https://user-images.githubusercontent.com/33366524/151390658-1f917031-b49e-45e2-8bcf-f84c27e73c4d.png"><br>
 
-<img width="769" alt="exhibit-based-question" src="https://user-images.githubusercontent.com/33366524/151390662-e5d8bad3-f900-47f8-84d2-6ab0425cc28a.png">
+**Given below shows a typical exhibit based question:**<br>
 
-This screenshot shows "Question Review":
+<img width="769" alt="exhibit-based-question" src="https://user-images.githubusercontent.com/33366524/151390662-e5d8bad3-f900-47f8-84d2-6ab0425cc28a.png"><br>
 
-<img width="611" alt="review-questions" src="https://user-images.githubusercontent.com/33366524/151390679-f2698d3a-39ae-4841-9f2a-5546dd522669.png">
+**This screenshot shows "Question Review":**<br>
 
-This following screen shot shows Review Screen of the exam being taken by the user:
-<img width="524" alt="review-screen" src="https://user-images.githubusercontent.com/33366524/151390681-a779aedd-d5f0-49eb-aaf2-bea03360c0f7.png">
+<img width="611" alt="review-questions" src="https://user-images.githubusercontent.com/33366524/151390679-f2698d3a-39ae-4841-9f2a-5546dd522669.png"><br>
 
-This shows the Review Summary after completion of exam by the user:
-<img width="384" alt="review-summary" src="https://user-images.githubusercontent.com/33366524/151390684-069e34cf-da3b-4383-a52e-ede6d549363c.png">
+**This following screen shot shows Review Screen of the exam being taken by the user:**<br>
+<img width="524" alt="review-screen" src="https://user-images.githubusercontent.com/33366524/151390681-a779aedd-d5f0-49eb-aaf2-bea03360c0f7.png"><br>
 
-Score report screen is shown below for a typical exam taken by a user:
+**This shows the Review Summary after completion of exam by the user:**<br>
+<img width="384" alt="review-summary" src="https://user-images.githubusercontent.com/33366524/151390684-069e34cf-da3b-4383-a52e-ede6d549363c.png"><br>
 
-<img width="439" alt="score-repo" src="https://user-images.githubusercontent.com/33366524/151390690-937f2a66-5a0d-4c30-8241-ce0bac090eff.png">
+**Score report screen is shown below for a typical exam taken by a user:**<br>
 
-Test screen is shown below where the question being answered by a user is shown:
-<img width="605" alt="test-screen" src="https://user-images.githubusercontent.com/33366524/151390694-7c8f6799-a4c8-40b4-8657-ed89bfe44df6.png">
+<img width="439" alt="score-repo" src="https://user-images.githubusercontent.com/33366524/151390690-937f2a66-5a0d-4c30-8241-ce0bac090eff.png"><br>
 
-The following picture shows the User Profile:
-<img width="539" alt="user-profile" src="https://user-images.githubusercontent.com/33366524/151390697-52e51d8c-59fc-43dd-ab14-7f5934ad74d0.png">
+**Test screen is shown below where the question being answered by a user is shown:**<br>
+<img width="605" alt="test-screen" src="https://user-images.githubusercontent.com/33366524/151390694-7c8f6799-a4c8-40b4-8657-ed89bfe44df6.png"><br>
 
+**The following picture shows the User Profile:**<br>
+<img width="539" alt="user-profile" src="https://user-images.githubusercontent.com/33366524/151390697-52e51d8c-59fc-43dd-ab14-7f5934ad74d0.png"><br>
 
 
-
-
-
-<!-- ### Tests
- This is the section where you mention all the different tests that can be performed with code examples -->
-
-### How to Use
+# How to Use
 <!-- As I have mentioned before, you never know who is going to read your readme. So it is better to provide information on how to use your project. A step-by-step guide is best suited for this purpose. It is better to explain steps as detailed as possible because it might be a beginner who is reading it. -->
- There are 3 categories of users:
+** There are 3 categories of users:**
  - Administrators
  - Authors
  - Registered Users
 
-### Contribute
-<!-- This is where you let them know that they can contribute and help you out. A guideline on how to contribute is also helpful -->
- The code is still in infancy and lot of features and refinements could be added.
 
-<!-- ### Credits
-Giving proper credit is most important. Mention any links/repos which helped you or inspired you to build this project. It can be a blog, another open source project, or just people who have contributed in building this project. -->
-
-
-### License
+# License
 <!-- A short description of the license. (MIT, Apache, etc.) -->
 The code is under Open Source software license. Individuals may use the code without any permission. Organizational users need to take the permission to use the software.
 
