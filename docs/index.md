@@ -6,6 +6,11 @@ The intention is to make online exam available using PHP/MySQL Apache web server
 # Table of contents
 
 - [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Screenshots](#screenshots)
+- [How to Use](#how-to-use)
+- [License](#license)
 
 
 # Features
