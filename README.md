@@ -10,7 +10,7 @@ The intention is to make online exam available using PHP/MySQL Apache web server
 - [Build Status](#Build-Status)
 - [Code Style](#Code-Style)
 - [Screenshots](#Given-below-are-a-few-screenshots-as-it-is-now)
-- [Tech/Framework used](#Tech/Framework-used)
+- [Tech/Framework used](#Tech-Framework-used)
 - [Features](#Features)
 - [Installation](#Installation)
 - [How to Use?](#How-to-Use)
@@ -69,7 +69,7 @@ Test screen is shown below where the question being answered by a user is shown:
 The following picture shows the User Profile:
 <img width="539" alt="user-profile" src="https://user-images.githubusercontent.com/33366524/151390697-52e51d8c-59fc-43dd-ab14-7f5934ad74d0.png">
 
-### Tech/Framework used
+### Tech-Framework used
 <!-- This is used to help the reader understand which tech or frameworks have been used to do the project. It helps the reader understand which all tech stack he has to be familiar with to understand the whole project. -->
 
 The code is entirely developed using notepad (text editor) and no content development software is used. Basically, one just needs a text editor for code changes or development. A picture editor would be required for editing images. Note that the content depends on the question base and the type of questions. It has nothing to do with the exam software itself.
