@@ -39,21 +39,40 @@ Online Exam project uses MySQL database to save exam information. Login into you
 
 **Setp 2: Create MySQL user**
 
-Next you need to create a MySQL user and give all privileges to the user for accessing and modifying above created database.<br>
+Next you need to create a MySQL user and give all privileges to the user for accessing and modifying database.<br>
 
-You need to manually create the required database and give permissions.<br>
-The code can be downloaded as a zip file from the repository. Create a MySQL database on your server, as well as a database user with full access and modification rights to the database.<br>
-Import the file "sql-statements-online.sql" into your MYSQL database. It will create all of the necessary tables.<br>
-Update the config.inc file to add the database name, database user, and password that were generated earlier. Set login and passwords as specified below:<br>
+**Step 3 : Assign user to database**
+
+Next step is to assign the created user to created database and give full permissions to the user.
+
+**Step 4 : Get the code**
+
+The code can be downloaded as a zip file from the repository. Unzip the downloaded file to make few required changes described below.
+
+**Step 5 : Create tables in database**
+
+In the unziped folder of the downloaded code you will find a file "sql-statements-online.sql". To create the tables you can import the sql file directly in to your database using phpMyAdmin cpanel it will create all of the necessary tables, or you can open the file in any editor and copy individual create table statements into cpanel.
+
+**Step 6 : Update configuration file**
+
+In the unziped folder of the downloaded code you will find a file config.inc. Open the file in any text editor and add the database name, database user, and password that were generated earlier. Sample values are given below: <br>
+
 ***********
 $datahost = "localhost"; <br>
 $datauser = "database_user"; <br>
 $datapasswd = "database_pwd";<br>
 $base = "database_name";<br>
 ***********
-The code modules need to be uploaded using FTP as specified in the document and give appropriate permissions for each file/directory.
-<!-- ### API reference
- If your project is small, then we can add the reference docs in the readme. For larger projects, it is better to provide links to where the API reference documentation is documented. -->
+
+**Step 7 : Upload files to server**
+
+Next step is to upload the files to the server. You can use FTP Client (like filezilla) to upload "Online" folder to your server. Before, upload, create a folder by name say "OnlineExams" in the home folder (Usually, public_html or html), and change the destination folder to "public_html/OnlineExams".
+
+**Step 8 : Open the url in browser**
+
+Next open the index page in any browser. URL for the index page will be "https://yourdomain.com/upload-folder-name/index.htm"
+
+
 
 ## Screenshots
 <!-- As the saying goes, a picture is equal to a thousand words. Most people will be interested if there is a visual representation of what the project is about. It helps them understand better. A visual representation can be snapshots of the project or a video of the functioning of the project.
