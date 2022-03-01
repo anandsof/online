@@ -6,34 +6,56 @@ The intention is to make online exam available using PHP/MySQL Apache web server
 
 # Table of contents
 
-- [Background](#background)
-- [Build Status](#build-status)
-- [Code Style](#code-style)
-- [Screenshots](#given-below-are-a-few-screenshots-as-it-is-now)
-- [Tech/Framework used](#tech-framework-used)
-- [Features](#features)
-- [Installation](#installation)
-- [How to Use](#how-to-use)
-- [Contribute](#contribute)
-- [License](#license)
 
- ### Background 
-<!--- This section is for letting the reader know why you created this project, the reason behind pursuing such a project, and why you have decided to do it.
--->
-It is the intention of the founding members to make free online exam scripts available to the public without any hassles and one can have an exam delivery platform of one's own using LAMP environment.
+## Features
+<!-- This is where you write what all extra features have been done in your project. Basically this is where you try to make your project stand out from the rest. -->
 
-### Build Status
+- Simple interface which is intuitive to the user
+- Very widely used LAMP environment, where one need not buy any software for making changes or improving the features.
+- Learn and exam modes so that users can change between these modes depending on the need
+- Scope for improvement
+- there is scope for improving the statistics reporting.
 
-<!--  This basically explains the current build status of the project. If there is a bug /error which needs addressing. This is done so for two different reasons The user understands that this is an issue and does not spend more time figuring if it was a mistake on their part.A developer who is familiar with the issue can suggest some solutions directly without going through the whole code. -->
+## Requirements
 
-The package is fully functional according to the current version. However, there is huge scope for improvement and additional contribution is welcome! 
+The server is preferably a web server accessible over the Internet in LAMP (Linux, Apache, MySQL, and PHP) environment. Before going ahead make sure that PHP script on the web server is working properly, and MySQL is installed and accessible using PHP. 
 
-### Code Style
-<!-- This lets the users know that you have used a particular code style and helps them when contributing to your project so that the whole project code style stays the same. Some common code styles: standard, xo, etc. -->
+### Web Server requirements:
+- LAMP server environment (Linux, Apache,
+- PHP 7.4 or greater
+- MySQL 5.6 or MariaDB 10.1 or greater
+- Accessibility over the public Internet or Intranet (for use within org network)
 
-The entire project uses html, Javascript, PHP, Perl, MySQL, and xml. Therefore, contributers need to be familiar with these scripting languages to write any code. 
+### Client Side Requirements
 
-### Given below are a few screenshots as it is now
+Local system (Client computer) requirements: Any Windows 7, 8, 10 or 11 computer may be used to access the web server remotely and install downloaded CBT server side scripts. You need an FTP software such as FileZilla to upload the files to the web server from your client computer. You also need to have login and password handy to login to the web server using FTP. Web server control panel such as C-panel/PHPMyAdmin will be useful in configuring the web server database, but not essential. 
+
+### Installation
+The installation is manual. Follow the steps given below to install project on your server.<br>
+
+**Step 1 : Creating MySQL database**
+
+Online Exam project uses MySQL database to save exam information. Login into your phpMyAdmin using login credential provided by your server host and then create a new database with name say "Online". <br>
+
+**Setp 2: Create MySQL user**
+
+Next you need to create a MySQL user and give all privileges to the user for accessing and modifying above created database.<br>
+
+You need to manually create the required database and give permissions.<br>
+The code can be downloaded as a zip file from the repository. Create a MySQL database on your server, as well as a database user with full access and modification rights to the database.<br>
+Import the file "sql-statements-online.sql" into your MYSQL database. It will create all of the necessary tables.<br>
+Update the config.inc file to add the database name, database user, and password that were generated earlier. Set login and passwords as specified below:<br>
+***********
+$datahost = "localhost"; <br>
+$datauser = "database_user"; <br>
+$datapasswd = "database_pwd";<br>
+$base = "database_name";<br>
+***********
+The code modules need to be uploaded using FTP as specified in the document and give appropriate permissions for each file/directory.
+<!-- ### API reference
+ If your project is small, then we can add the reference docs in the readme. For larger projects, it is better to provide links to where the API reference documentation is documented. -->
+
+## Screenshots
 <!-- As the saying goes, a picture is equal to a thousand words. Most people will be interested if there is a visual representation of what the project is about. It helps them understand better. A visual representation can be snapshots of the project or a video of the functioning of the project.
 -->
 Given below is the login screen (the login is same for user as well as the exam admin. However, admins will have more privileges like creating authors.
@@ -69,57 +91,9 @@ Test screen is shown below where the question being answered by a user is shown:
 The following picture shows the User Profile:
 <img width="539" alt="user-profile" src="https://user-images.githubusercontent.com/33366524/151390697-52e51d8c-59fc-43dd-ab14-7f5934ad74d0.png">
 
-### Tech-Framework used
-<!-- This is used to help the reader understand which tech or frameworks have been used to do the project. It helps the reader understand which all tech stack he has to be familiar with to understand the whole project. -->
 
-The code is entirely developed using notepad (text editor) and no content development software is used. Basically, one just needs a text editor for code changes or development. A picture editor would be required for editing images. Note that the content depends on the question base and the type of questions. It has nothing to do with the exam software itself.
 
-### Features
-<!-- This is where you write what all extra features have been done in your project. Basically this is where you try to make your project stand out from the rest. -->
 
-- Simple interface which is intuitive to the user
-- Very widely used LAMP environment, where one need not buy any software for making changes or improving the features.
-- Learn and exam modes so that users can change between these modes depending on the need
-- Scope for improvement
-- there is scope for improving the statistics reporting.
-
-## Requirements
-
-The server is preferably a web server accessible over the Internet in LAMP (Linux, Apache, MySQL, and PHP) environment. Before going ahead make sure that PHP script on the web server is working properly, and MySQL is installed and accessible using PHP. 
-
-### Web Server requirements:
-- LAMP server environment (Linux, Apache,
-- PHP 7.4 or greater
-- MySQL 5.6 or MariaDB 10.1 or greater
-- Accessibility over the public Internet or Intranet (for use within org network)
-
-### Client Side Requirements
-
-Local system (Client computer) requirements: Any Windows 7, 8, 10 or 11 computer may be used to access the web server remotely and install downloaded CBT server side scripts. You need an FTP software such as FileZilla to upload the files to the web server from your client computer. You also need to have login and password handy to login to the web server using FTP. Web server control panel such as C-panel/PHPMyAdmin will be useful in configuring the web server database, but not essential. 
-
-### Installation
-<!-- If your project needs installation of certain software or configurations to the system. Do mention it in this section as it helps a lot for the reader to use your project. The steps mentioned should be precise and explanatory.  If possible, you can add links that can help them better understand how to configure/install the necessary files or softwares. -->
-The installation is manual. Follow the steps given below to install project on your server.
-
-Step 1 : Creating MySQL database and user
-
-Online Exam project uses MySQL database to save exam information. Login into your phpMyAdmin using login credential provided by your server host and then create a new database with name say "Online".
-
-Next you need to create a MySQL user 
-
-You need to manually create the required database and give permissions.<br>
-The code can be downloaded as a zip file from the repository. Create a MySQL database on your server, as well as a database user with full access and modification rights to the database.<br>
-Import the file "sql-statements-online.sql" into your MYSQL database. It will create all of the necessary tables.<br>
-Update the config.inc file to add the database name, database user, and password that were generated earlier. Set login and passwords as specified below:<br>
-***********
-$datahost = "localhost"; <br>
-$datauser = "database_user"; <br>
-$datapasswd = "database_pwd";<br>
-$base = "database_name";<br>
-***********
-The code modules need to be uploaded using FTP as specified in the document and give appropriate permissions for each file/directory.
-<!-- ### API reference
- If your project is small, then we can add the reference docs in the readme. For larger projects, it is better to provide links to where the API reference documentation is documented. -->
 
 
 <!-- ### Tests
