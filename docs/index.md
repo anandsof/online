@@ -120,7 +120,7 @@ Next open the index page in any browser. URL for the index page will be "https:/
 
 # How to Use
 <!-- As I have mentioned before, you never know who is going to read your readme. So it is better to provide information on how to use your project. A step-by-step guide is best suited for this purpose. It is better to explain steps as detailed as possible because it might be a beginner who is reading it. -->
-** There are 3 categories of users:**
+**There are 3 categories of users:**
  - Administrators
  - Authors
  - Registered Users
@@ -132,5 +132,4 @@ The code is under Open Source software license. Individuals may use the code wit
 
 - Source website: [Certexams.com](https://www.certexams.com)
 - View the demo site by logging on to [online.certexams.com](https://online.certexams.com/index.html)
-- Help with editing, check this resource: #### https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 <!-- - Provides scrips for conducting online exams. -->
