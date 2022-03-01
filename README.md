@@ -13,7 +13,7 @@ The intention is to make online exam available using PHP/MySQL Apache web server
 - [Tech/Framework used](#Tech/Framework-used)
 - [Features](#Features)
 - [Installation](#Installation)
-- [How to Use?](#How-to-Use?)
+- [How to Use?](#How-to-Use)
 - [Contribute](#Contribute)
 - [License](#License)
 
@@ -106,7 +106,7 @@ The code modules need to be uploaded using FTP as specified in the document and 
 <!-- ### Tests
  This is the section where you mention all the different tests that can be performed with code examples -->
 
-### How to Use?
+### How to Use
 <!-- As I have mentioned before, you never know who is going to read your readme. So it is better to provide information on how to use your project. A step-by-step guide is best suited for this purpose. It is better to explain steps as detailed as possible because it might be a beginner who is reading it. -->
  There are 3 categories of users:
  - Administrators
