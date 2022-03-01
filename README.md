@@ -7,15 +7,15 @@ The intention is to make online exam available using PHP/MySQL Apache web server
 # Table of contents
 
 - [Background](#background)
-- [Build Status](-Build-Status)
-- [Code Style](-Code-Style)
-- [Screenshots](Given-below-are-a-few-screenshots-as-it-is-now)
-- [Tech/Framework used](Tech/Framework-used)
-- [Features](Features)
-- [Installation](Installation)
-- [How to Use?](How-to-Use?)
-- [Contribute](Contribute)
-- [License](License)
+- [Build Status](#Build-Status)
+- [Code Style](#Code-Style)
+- [Screenshots](#Given-below-are-a-few-screenshots-as-it-is-now)
+- [Tech/Framework used](#Tech/Framework-used)
+- [Features](#Features)
+- [Installation](#Installation)
+- [How to Use?](#How-to-Use?)
+- [Contribute](#Contribute)
+- [License](#License)
 
  ### Background 
 <!--- This section is for letting the reader know why you created this project, the reason behind pursuing such a project, and why you have decided to do it.
