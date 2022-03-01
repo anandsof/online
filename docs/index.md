@@ -5,6 +5,8 @@ The intention is to make online exam available using PHP/MySQL Apache web server
 
 # Table of contents
 
+- [Features](#features)
+
 
 # Features
 <!-- This is where you write what all extra features have been done in your project. Basically this is where you try to make your project stand out from the rest. -->
@@ -62,7 +64,7 @@ $datauser = "database_user"; <br>
 $datapasswd = "database_pwd";<br>
 $base = "database_name";<br>
 ***********
-Please make sure you enter correct values as it will lead to MySQL connection error.
+Please make sure you enter correct values as any incorrect value will lead to MySQL connection error.
 
 **Step 7 : Upload files to server**
 
