@@ -6,7 +6,7 @@ The intention is to make online exam available using PHP/MySQL Apache web server
 
 # Table of contents
 
-- [Background](Background)
+- [Background](background)
 - [Build Status](Build-Status)
 - [Code Style](Code-Style)
 - [Screenshots](Given-below-are-a-few-screenshots-as-it-is-now)
