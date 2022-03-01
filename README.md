@@ -4,6 +4,19 @@
 <!-- A little brief about what the project is about. It should be like a small summary format informing about the main purpose of the project. -->
 The intention is to make online exam available using PHP/MySQL Apache web server. The scripts are commented as necessary, but feel free to update the same. One can install the scripts, and configure the same appropriately, after which, it is possible to create, populate, and deliver the exams over the Internet. The user just needs to login to take the exam(s)
 
+# Table of contents
+
+- [Background](Background)
+- [Build Status](Build-Status)
+- [Code Style](Code-Style)
+- [Screenshots](Given-below-are-a-few-screenshots-as-it-is-now)
+- [Tech/Framework used](Tech/Framework-used)
+- [Features](Features)
+- [Installation](Installation)
+- [How to Use?](How-to-Use?)
+- [Contribute](Contribute)
+- [License](License)
+
  ### Background 
 <!--- This section is for letting the reader know why you created this project, the reason behind pursuing such a project, and why you have decided to do it.
 -->
@@ -20,7 +33,7 @@ The package is fully functional according to the current version. However, there
 
 The entire project uses html, Javascript, PHP, Perl, MySQL, and xml. Therefore, contributers need to be familiar with these scripting languages to write any code. 
 
-### Given below are a few screenshots as it is now:
+### Given below are a few screenshots as it is now
 <!-- As the saying goes, a picture is equal to a thousand words. Most people will be interested if there is a visual representation of what the project is about. It helps them understand better. A visual representation can be snapshots of the project or a video of the functioning of the project.
 -->
 Given below is the login screen (the login is same for user as well as the exam admin. However, admins will have more privileges like creating authors.
