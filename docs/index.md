@@ -61,7 +61,8 @@ $datahost = "localhost"; <br>
 $datauser = "database_user"; <br>
 $datapasswd = "database_pwd";<br>
 $base = "database_name";<br>
-***********<br>
+***********
+Please make sure you enter correct values as it will lead to MySQL connection error.
 
 **Step 7 : Upload files to server**
 
