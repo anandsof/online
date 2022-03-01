@@ -63,12 +63,12 @@ In the unziped folder of the downloaded code you will find a file "sql-statement
 
 In the unziped folder of the downloaded code you will find a file config.inc. Open the file in any text editor and add the database name, database user, and password that were generated earlier. Sample values are given below: <br>
 
-***********
+<hr />
 $datahost = "localhost"; <br>
 $datauser = "database_user"; <br>
 $datapasswd = "database_pwd";<br>
 $base = "database_name";<br>
-***********
+<hr />
 <br>
 Please make sure you enter correct values as any incorrect value will lead to MySQL connection error.
 
