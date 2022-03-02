@@ -34,7 +34,8 @@ The server is preferably a web server accessible over the Internet in LAMP (Linu
 
 ### Client Side Requirements
 
-Local system (Client computer) requirements: Any Windows 7, 8, 10 or 11 computer may be used to access the web server remotely and install downloaded CBT server side scripts. You need an FTP software such as FileZilla to upload the files to the web server from your client computer. You also need to have login and password handy to login to the web server using FTP. Web server control panel such as C-panel/PHPMyAdmin will be useful in configuring the web server database, but not essential. 
+Local system (Client computer) requirements: Any Windows 7, 8, 10 or 11 / Linux / MAC computer with any browser aplication may be used to access the online exam application. 
+You can use Windows/Linux/MAC system to access web server remotely and install downloaded server side scripts. You need an FTP software such as FileZilla to upload the files to the web server from your client computer. You also need to have login and password handy to login to the web server using FTP. Web server control panel such as C-panel/PHPMyAdmin will be useful in configuring the web server database, but not essential. 
 
 # Installation
 The installation is manual. Follow the steps given below to install project on your server.<br>
