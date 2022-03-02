@@ -42,35 +42,35 @@ Given below is the login screen (the login is same for user as well as the exam 
 <br>
 Given below is the User dashboard that displays a left pane and a right pane. The left pane enables users to change password, view profile, etc.
 <br>
-<img alt="dashboard" src="https://user-images.githubusercontent.com/33366524/151390638-2d5ae65b-1e71-41f7-8a61-4b3b73bcba3f.png">
+<img width="926" alt="dashboard" src="https://user-images.githubusercontent.com/33366524/151390638-2d5ae65b-1e71-41f7-8a61-4b3b73bcba3f.png">
 <br>
 There are two modes of exam, one is Learn mode and the other is Exam mode.
 <br>
-<img  alt="exam-modes" src="https://user-images.githubusercontent.com/33366524/151390658-1f917031-b49e-45e2-8bcf-f84c27e73c4d.png">
+<img width="616" alt="exam-modes" src="https://user-images.githubusercontent.com/33366524/151390658-1f917031-b49e-45e2-8bcf-f84c27e73c4d.png">
 <br>
 Given below shows a typical exhibit based question:
 <br>
-<img alt="exhibit-based-question" src="https://user-images.githubusercontent.com/33366524/151390662-e5d8bad3-f900-47f8-84d2-6ab0425cc28a.png">
+<img width="796" alt="exhibit-based-question" src="https://user-images.githubusercontent.com/33366524/151390662-e5d8bad3-f900-47f8-84d2-6ab0425cc28a.png">
 <br>
 This screenshot shows "Question Review":
 <br>
-<img alt="review-questions" src="https://user-images.githubusercontent.com/33366524/151390679-f2698d3a-39ae-4841-9f2a-5546dd522669.png">
+<img width="611" alt="review-questions" src="https://user-images.githubusercontent.com/33366524/151390679-f2698d3a-39ae-4841-9f2a-5546dd522669.png">
 <br>
 This following screen shot shows Review Screen of the exam being taken by the user:<br>
-<img  alt="review-screen" src="https://user-images.githubusercontent.com/33366524/151390681-a779aedd-d5f0-49eb-aaf2-bea03360c0f7.png">
+<img  width="524" alt="review-screen" src="https://user-images.githubusercontent.com/33366524/151390681-a779aedd-d5f0-49eb-aaf2-bea03360c0f7.png">
 <br>
 This shows the Review Summary after completion of exam by the user:<br>
-<img  alt="review-summary" src="https://user-images.githubusercontent.com/33366524/151390684-069e34cf-da3b-4383-a52e-ede6d549363c.png">
+<img  width="384" alt="review-summary" src="https://user-images.githubusercontent.com/33366524/151390684-069e34cf-da3b-4383-a52e-ede6d549363c.png">
 <br>
 Score report screen is shown below for a typical exam taken by a user:<br>
 
-<img  alt="score-repo" src="https://user-images.githubusercontent.com/33366524/151390690-937f2a66-5a0d-4c30-8241-ce0bac090eff.png">
+<img width="439" alt="score-repo" src="https://user-images.githubusercontent.com/33366524/151390690-937f2a66-5a0d-4c30-8241-ce0bac090eff.png">
 <br>
 Test screen is shown below where the question being answered by a user is shown:<br>
-<img  alt="test-screen" src="https://user-images.githubusercontent.com/33366524/151390694-7c8f6799-a4c8-40b4-8657-ed89bfe44df6.png">
+<img width="605" alt="test-screen" src="https://user-images.githubusercontent.com/33366524/151390694-7c8f6799-a4c8-40b4-8657-ed89bfe44df6.png">
 <br>
 The following picture shows the User Profile:
-<img alt="user-profile" src="https://user-images.githubusercontent.com/33366524/151390697-52e51d8c-59fc-43dd-ab14-7f5934ad74d0.png">
+<img width="539" alt="user-profile" src="https://user-images.githubusercontent.com/33366524/151390697-52e51d8c-59fc-43dd-ab14-7f5934ad74d0.png">
 <br>
 ### Tech-Framework used
 <!-- This is used to help the reader understand which tech or frameworks have been used to do the project. It helps the reader understand which all tech stack he has to be familiar with to understand the whole project. -->
