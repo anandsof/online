@@ -37,7 +37,7 @@ The entire project uses html, Javascript, PHP, Perl, MySQL, and xml. Therefore, 
 <!-- As the saying goes, a picture is equal to a thousand words. Most people will be interested if there is a visual representation of what the project is about. It helps them understand better. A visual representation can be snapshots of the project or a video of the functioning of the project.
 -->
 Given below is the login screen (the login is same for user as well as the exam admin. However, admins will have more privileges like creating authors.
-<img width="608" alt="login" src="https://user-images.githubusercontent.com/33366524/151390671-052bdd53-92aa-4414-8f6e-1548f7fe516d.png">
+![Optional Text](memberloginnew.png)
 Given below is the User dashboard that displays a left pane and a right pane. The left pane enables users to change password, view profile, etc.
 
 <img width="926" alt="dashboard" src="https://user-images.githubusercontent.com/33366524/151390638-2d5ae65b-1e71-41f7-8a61-4b3b73bcba3f.png">
