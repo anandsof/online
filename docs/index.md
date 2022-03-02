@@ -85,7 +85,7 @@ Next open the index page in any browser. URL for the index page will be "https:/
 ## Screenshots
 
 **Given below is the login screen (the login is same for user as well as the exam admin. However, admins will have more privileges like creating authors.**<br>
-<img width="608" alt="login" src="https://user-images.githubusercontent.com/33366524/151390671-052bdd53-92aa-4414-8f6e-1548f7fe516d.png"><br>
+![Optional Text](https://github.com/anandsof/online/raw/main/memberloginnew.png)<br>
 **Given below is the User dashboard that displays a left pane and a right pane. The left pane enables users to change password, view profile, etc.**<br>
 
 <img width="926" alt="dashboard" src="https://user-images.githubusercontent.com/33366524/151390638-2d5ae65b-1e71-41f7-8a61-4b3b73bcba3f.png"><br>
