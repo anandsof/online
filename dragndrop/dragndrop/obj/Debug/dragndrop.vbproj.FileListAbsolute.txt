@@ -1,0 +1,11 @@
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\bin\Debug\dragndrop.exe.config
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\bin\Debug\dragndrop.exe
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\bin\Debug\dragndrop.pdb
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\bin\Debug\dragndrop.xml
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\obj\Debug\dragndrop.vbprojResolveAssemblyReference.cache
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\obj\Debug\dragndrop.Form1.resources
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\obj\Debug\dragndrop.Resources.resources
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\obj\Debug\dragndrop.vbproj.GenerateResource.Cache
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\obj\Debug\dragndrop.exe
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\obj\Debug\dragndrop.xml
+E:\Captured\CreateAuthfiles\DragandDrop\dragndrop\dragndrop\obj\Debug\dragndrop.pdb
