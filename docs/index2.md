@@ -302,4 +302,5 @@ Fig6: screenshot for example3 control after being dragged to a target.
 
 Check out this link for more details
 
-https://www.tutorialsweb.com/dragndrop_tut/vbdotnet-1.htm
+[https://www.tutorialsweb.com/dragndrop_tut/vbdotnet-1.htm]
+
